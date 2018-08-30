@@ -1,8 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom'
+import {Provider} from 'mobx-react'
+import {BrowserRouter} from 'react-router-dom'
+import {AppContainer} from 'react-hot-loader'
+import App from './views/index'
+import appState from './store/app-state.js'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+const root =document.getElementById('root')
+const render =(Component)=>{
+  ReactDOM.hydrate(
+    <AppContainer>
+    <BrowserRouter>
+      <Provider appState={appState}>
+      <Component/>
+      </Provider>
+      </BrowserRouter>
+    </AppContainer>,
+    root
+  )
+}
+
+render(App )
+
+// export default App;

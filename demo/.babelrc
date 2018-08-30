@@ -1,0 +1,10 @@
+
+{
+    "presets": [
+        "es2015",
+        "stage-1",
+        "react",
+        "stage-2",
+        "react-native-stage-0/decorator-support"],
+    "plugins":["transform-decorators-legacy","transform-decorators","react-hot-loader/babel"]
+}

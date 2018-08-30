@@ -21,12 +21,13 @@ export default class demo extends React.Component {
     }
     // React 16可以不只有一个div根节点
     render() {
-        return (
+        return [
             <div>
                 <div>this is app</div>
                 <input type="text" onChange={this.changeName} />
                 <div>{this.props.appState.msg}</div>
-            </div>
-        )
+            </div>,
+            <Routes />
+        ]
     }
 }

@@ -1,17 +1,19 @@
 import React from 'react'
-// import {observer,inject} from 'mobx-react'
-// import {AppState} from '../store/store'
-// import { observable } from 'mobx';
-
-// @inject('appState') @observer
-
+import {connect} from 'react-redux'
 export default  class Demo2 extends React.Component{
     componentDidMount(){
 
     }
+   
     render(){
+        const {text,onChangeText,onButtonClick} =this.props
         return(
-            <div>1111</div>
+            <div>
+                <div>index2</div>
+                {/* <div>{text}</div> */}
+                {/* <button onClick={onButtonClick}>clickme</button> */}
+            </div>
         )
     }
 }
+// Demo2 =connect(mapStateToProps, mapDispatchToProps)(Demo2)

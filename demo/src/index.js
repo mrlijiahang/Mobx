@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
 import {Provider} from 'mobx-react'
+// import {Provider} from 'react-redux'
 import {BrowserRouter} from 'react-router-dom'
 import {AppContainer} from 'react-hot-loader'
-import App from './views/index'
+import App from './App'
 import appState from './store/app-state.js'
+
 
 
 const root =document.getElementById('root')
@@ -21,6 +23,6 @@ const render =(Component)=>{
   )
 }
 
-render(App )
+render(App)
 
 // export default App;
